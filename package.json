@@ -1,13 +1,13 @@
 {
-  "name": "theNameOfYourLibWhichMustBeAValidCamelCasedJavaScriptIdentifier",
+  "name": "xorCipher",
 
-  "description": "This should be a short description of your entry.",
+  "description": "A simple XOR cipher",
 
   "keywords": [
-    "five",
-    "descriptive",
-    "keywords",
-    "or",
-    "fewer"
+    "xor",
+    "string",
+    "cipher",
+    "encrypt",
+    "decrypt",
   ]
 }

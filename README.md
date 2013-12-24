@@ -1,26 +1,17 @@
-140byt.es
+XOR Cipher
 =========
 
-A tweet-sized, fork-to-play, community-curated collection of JavaScript.
+A simple XOR cipher in 95 bytes.
 
-How to play
------------
+"In cryptography, the simple XOR cipher is a type of additive cipher... a string of text can be encrypted by applying the bitwise XOR operator to every character using a given key. To decrypt the output, merely reapplying the XOR function with the key will remove the cipher."
 
-1. Click the ![Fork](https://d3nwyuy0nl342s.cloudfront.net/images/gist/buttons/fork_button.png) button above to fork this gist.
-2. Modify all the files to according to the rules below.
-3. Save your entry and tweet it up!
+[Wikipedia](http://http://en.wikipedia.org/wiki/XOR_cipher)
 
-Keep in mind that thanks to the awesome sensibilities of the GitHub team, gists are just repos. So feel free to clone yours and work locally for a more comfortable environment, and to allow commit messages.
-
-Rules
------
-All entries must exist in an `index.js` file, whose contents are
-
-1. an assignable, valid Javascript expression that
-2. contains no more than 140 bytes, and
-3. does not leak to the global scope.
-
-All entries must also be licensed under the [WTFPL](http://sam.zoy.org/wtfpl/) or equally permissive license.
+Source
+------
+```javascript
+var xor = function(a,b){return a.replace(/./g,function(a){return String.fromCharCode(a.charCodeAt()^b)})}
+```
 
 For more information
 --------------------

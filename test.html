@@ -1,12 +1,14 @@
 <!DOCTYPE html> 
-<title>Foo</title>
-<div>Expected value: <b>undefined</b></div>
-<div>Actual value: <b id="ret"></b></div>
+<title>XOR Cipher</title>
+<div>Expected encrypted value: <b>Wkf#Rvj`h#Aqltm#El{#Ivnsp#Lufq#Wkf#Obyz#Gld-</b></div>
+<div>Actual encrypted value: <b id="encrypted"></b></div>
+<div>Expected decrypted value: <b>The Quick Brown Fox Jumps Over The Lazy Dog.</b></div>
+<div>Decrypted value: <b id="decrypted"></b></div>
+
 <script>
-  // write a small example that shows off the API for your example
-  // and tests it in one fell swoop.
 
-  var myFunction = function(){ /* the code here should be identical to the entry. */ }
+  var xor = function(a,b){return a.replace(/./g,function(a){return String.fromCharCode(a.charCodeAt()^b)})}
 
-  document.getElementById( "ret" ).innerHTML = myFunction()
+  document.getElementById( "encrypted" ).innerHTML = xor('The Quick Brown Fox Jumps Over The Lazy Dog.',3);
+  document.getElementById( "decrypted" ).innerHTML = xor('Wkf#Rvj`h#Aqltm#El{#Ivnsp#Lufq#Wkf#Obyz#Gld-',3);
 </script>
